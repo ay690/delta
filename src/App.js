@@ -5,6 +5,7 @@ import SignUp from "./pages/SignupPage";
 import Pricing from "./pages/PricingPage";
 import GlobalStyle from "./globalStyles";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/pricing" exact component={Pricing} />
         <Route path="/signup" exact component={SignUp} />
       </Switch>
+      <Footer />
     </Router>
   );
 }
