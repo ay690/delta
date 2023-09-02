@@ -46,8 +46,12 @@ export const FeatureImageWrapper = styled.div`
 	margin-bottom: 1rem;
 	border-radius: 50%;
 	border: 2px solid #000;
-
+	transition: transform 0.3s ease;
 	padding: 30px;
+
+	&:hover{
+		transform: scale(1.1);
+	}
 `;
 export const FeatureName = styled.h3`
 	font-weight: 600;
