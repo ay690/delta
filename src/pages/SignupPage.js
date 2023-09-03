@@ -1,10 +1,9 @@
 import React from 'react'
+import Form from '../components/Form/Form'
 
 const SignUp = () => {
   return (
-    <div>
-      Signup
-    </div>
+    <Form />
   )
 }
 
