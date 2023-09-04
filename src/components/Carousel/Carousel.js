@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Slider from "react-slick"; // Import the Slider component from react-slick
+import "slick-carousel/slick/slick.css"; // Import the slick carousel styles
+import "slick-carousel/slick/slick-theme.css"; // Import the slick carousel theme styles
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { data, SliderSettings } from "../../data/CarouselData";
 import { Row, Heading, TextWrapper, Section } from "../../globalStyles";
 import {
   ButtonContainer,
-  ReviewSlider,
   ImageWrapper,
   CarouselImage,
   CardButton,
@@ -13,6 +15,20 @@ import {
 
 const Carousel = () => {
   const [sliderRef, setSliderRef] = useState(null);
+
+  // Function to go to the next slide automatically
+  const goToNextSlide = () => {
+    sliderRef.slickNext();
+  };
+
+  useEffect(() => {
+    // Automatically go to the next slide every 3 seconds
+    const interval = setInterval(goToNextSlide, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [sliderRef]);
 
   return (
     <Section margin="auto" maxWidth="1280px" padding="50px 70px" inverse>
@@ -26,7 +42,7 @@ const Carousel = () => {
         </ButtonContainer>
       </Row>
 
-      <ReviewSlider {...SliderSettings} ref={setSliderRef}>
+      <Slider {...SliderSettings} ref={(slider) => setSliderRef(slider)}>
         {data.map((el, idx) => (
           <ImageWrapper key={idx}>
             <CarouselImage src={el.image} />
@@ -39,7 +55,7 @@ const Carousel = () => {
             <CardButton>Learn More</CardButton>
           </ImageWrapper>
         ))}
-      </ReviewSlider>
+      </Slider>
     </Section>
   );
 };

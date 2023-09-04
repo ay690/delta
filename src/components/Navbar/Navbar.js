@@ -13,6 +13,9 @@ import {
   NavMenu,
   NavbarContainer,
   MobileIcon,
+  TextWrapper,
+  TextLogo,
+  TextSubtitle,
 } from "./NavbarStyles";
 import { useHistory, useLocation } from "react-router-dom";
 
@@ -48,7 +51,11 @@ const Navbar = () => {
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">
-            <NavIcon src="./assets/logo.png" alt="Logo" /> Delta
+            <NavIcon src="./assets/logo.png" alt="Logo" />
+             <TextWrapper>
+              <TextLogo>Dumping Data</TextLogo>
+              <TextSubtitle>Unlocking Global Opportunity</TextSubtitle>
+             </TextWrapper>
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             { show ? <FaTimes /> : <CgMenuRight /> }

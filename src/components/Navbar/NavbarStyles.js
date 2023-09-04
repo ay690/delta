@@ -36,6 +36,17 @@ export const NavIcon = styled.img`
   margin-right: 1rem;
   width: 3rem;
 `;
+export const TextWrapper = styled.div`
+ display: flex;
+ flex-direction: column;
+`
+export const TextLogo = styled.p`
+ font-size: 1rem;
+ white-space: nowrap;
+`
+export const TextSubtitle = styled.p`
+ font-size: 0.5rem;
+`
 export const MobileIcon = styled.div`
   display: none;
   z-index: 50;
