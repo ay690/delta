@@ -34,18 +34,20 @@ export const NavLogo = styled(Link)`
 `;
 export const NavIcon = styled.img`
   margin-right: 1rem;
-  width: 3rem;
+  width: 5rem;
 `;
 export const TextWrapper = styled.div`
  display: flex;
  flex-direction: column;
 `
 export const TextLogo = styled.p`
- font-size: 1rem;
+ font-size: 1.5rem;
  white-space: nowrap;
 `
 export const TextSubtitle = styled.p`
  font-size: 0.5rem;
+ margin-left: auto;
+ color: goldenrod
 `
 export const MobileIcon = styled.div`
   display: none;

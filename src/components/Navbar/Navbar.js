@@ -51,11 +51,12 @@ const Navbar = () => {
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">
-            <NavIcon src="./assets/logo.png" alt="Logo" />
+          
              <TextWrapper>
               <TextLogo>Dumping Data</TextLogo>
               <TextSubtitle>Unlocking Global Opportunity</TextSubtitle>
              </TextWrapper>
+             <NavIcon src="./assets/dump.png" alt="Logo" />
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             { show ? <FaTimes /> : <CgMenuRight /> }
